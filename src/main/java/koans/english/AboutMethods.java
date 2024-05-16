@@ -26,6 +26,18 @@ public class AboutMethods {
      * 
      */
     public static void computeAgeIn5And10And20YearsConsole() {
+        System.out.println("What is your age?");
+        String age = readLine();
+        int futureage = Integer.parseInt(age) + 5;
+        System.out.println("In 5 years from now, you will be " + Integer.toString(futureage) + ".");
+        System.out.println("What is your age?");
+        String age10 = readLine();
+        int futureage10 = Integer.parseInt(age10) + 10;
+        System.out.println("In 10 years from now, you will be " + Integer.toString(futureage10) + ".");
+        System.out.println("What is your age?");
+        String age20 = readLine();
+        int futureage20 = Integer.parseInt(age20) + 20;
+        System.out.println("In 20 years from now, you will be " + Integer.toString(futureage20) + ".");
 
     }
 
@@ -115,8 +127,16 @@ public class AboutMethods {
      * In 20 years from now, you will be [The new age entered above + 20 years].
      * 
      */
-    public static void computeAgeIn5And10And20YearsConsoleWithMethod() {
-
+    public static void addToAge(int addage) {
+        System.out.println("What is your age?");
+        String age = readLine();
+        int futureage = Integer.parseInt(age) + addage;
+        System.out.println("In " + addage + " years from now, you will be " + futureage + ".");
+    }
+    public static void computeAgeIn5And10And20YearsConsoleWithMethod () {
+        addToAge(5);
+        addToAge(10);
+        addToAge(20);
     }
 
     /**
@@ -172,8 +192,12 @@ public class AboutMethods {
      * 
      */
     public static int square(int number) {
-        return 0;
+        return number * number;
     }    
+
+    public static void printValue() {
+        System.out.println(square(Integer.parseInt(readLine())));
+    }
 
     
     /**
@@ -192,7 +216,9 @@ public class AboutMethods {
      * opposite(2) should return -2
      * 
      */
-
+    public static int opposite(int number) {
+        return number - number * 2;
+    }
 
     /**
      * # Helping a farmer
@@ -207,4 +233,8 @@ public class AboutMethods {
      * legs(2, 3, 4) should return 32
      * 
      */
+
+     public static int legs(int chickenCount, int pigCount, int cowCount) {
+        return chickenCount * 2 + pigCount * 4 + cowCount * 4;
+     }
 }

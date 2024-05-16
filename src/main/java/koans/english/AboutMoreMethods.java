@@ -13,7 +13,8 @@ public class AboutMoreMethods {
      * abs(-2) should return 2
      * 
      */
-
+    public static int abs(int number) {
+    }
 
      /**
      * # What's the min value?
