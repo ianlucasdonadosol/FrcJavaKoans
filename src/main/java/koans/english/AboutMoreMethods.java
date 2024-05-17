@@ -14,6 +14,11 @@ public class AboutMoreMethods {
      * 
      */
     public static int abs(int number) {
+        if (number >= 0) {
+            return number;
+        } else {
+            return number + -number * 2;
+        }
     }
 
      /**
@@ -28,7 +33,13 @@ public class AboutMoreMethods {
      * min(4, 3) should return 3
      * 
      */
-
+    public static int min(int numberone, int numbertwo) {
+        if (numberone > numbertwo) {
+            return numbertwo;
+        } else {
+            return numberone;
+        }
+    }
 
      /**
      * # Computing the remainder of an integer division
